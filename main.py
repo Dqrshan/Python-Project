@@ -66,6 +66,7 @@ while True:
                 #
                 # subtopic 2
                 elif ch1 == 2:
+                        print(">>> Print() - It is a function used to display the desired data type given by the user.\nFor example;\n \n")
                         strToPrint = str(input("Enter the string you want to print: "))
                         print(f"Printed Text: \"{strToPrint}\"")
                         print()
@@ -78,4 +79,5 @@ while True:
 
         # chapter 2
         elif choice == 2:
-                chap2 = PrettyTable([])
+                chap2 = PrettyTable(["S. No.", "Python Fundamentals"])
+                
