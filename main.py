@@ -26,6 +26,7 @@ while True:
         print()
 
         choice = int(input("Enter Your Choice:- "))
+        print("[Enter \"exit\" To Quit Anytime]")
         print()
 
         # chapter 1
@@ -142,4 +143,36 @@ while True:
         
         # chapter 5
         elif choice == 5:
-                
+                chap5 = PrettyTable(["S. No.", "String Manipulation"])
+                chap5.add_rows([
+                        ["1", "String Operators"]
+                        ["", ""],
+                        ["2", "String Slicing"],
+                        ["", ""],
+                        ["3", "String Functions"],
+                        ["", ""],
+                        ["4", "String Methods"],                        
+                ])
+                print(chap5)
+                print()
+                ch = int(input("Enter Your Choice:- "))
+                print()
+                print()
+        
+        # chapter 6
+        elif choice == 6:
+                chap6 = PrettyTable(["S. No.", "List Manipulation"])
+                chap6.add_rows([
+                        ["1", "Creating A List"],
+                        ["", ""],
+                        ["2", "List Operations"],
+                        ["", ""],
+                        ["3", "Nested Lists"],
+                        ["", ""],
+                        ["4", "Working With Lists"],
+                ])
+                print(chap6)
+                print()
+                ch = int(input("Enter Your Choice:- "))
+                print()
+                print()
