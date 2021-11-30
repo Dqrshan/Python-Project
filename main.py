@@ -145,7 +145,7 @@ while True:
         elif choice == 5:
                 chap5 = PrettyTable(["S. No.", "String Manipulation"])
                 chap5.add_rows([
-                        ["1", "String Operators"]
+                        ["1", "String Operators"],
                         ["", ""],
                         ["2", "String Slicing"],
                         ["", ""],
