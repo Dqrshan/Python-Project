@@ -1,4 +1,6 @@
+from PIL import Image
 from prettytable import PrettyTable
+
 head = PrettyTable(["Computer Project : Class 11 Science-I"])
 head.add_row(["         - by Devasurya & Darshan"])
 
@@ -302,18 +304,124 @@ Python offers many built-in functions and methods for string manipulation.
             ["2", "List Operations"],
             ["", ""],
             ["3", "Nested Lists"],
-            ["", ""],
-            ["4", "Working With Lists"],
         ])
         print(chap6)
         print()
-        ch = int(input("Enter Your Choice:- "))
+        ch6 = int(input("Enter Your Choice:- "))
         print()
-        print()
+
+        if ch6 == 1:
+            x += 1
+            print("""A List is a standard data type of Python that can store a sequence of values belonging to any type. They are depicted through square brackets [].
+In order to create a list, put a number of expressions in square brackets []. Eg: [1, 2, 3, 4, "a", "b", "c", "d"].
+
+Now try creating your own list.""")
+            listvalues = eval(input("Enter your list now: "))
+            print(f"Your list: {listvalues}")
+            print("""Creating a list: 
+You can use "L = list(1, 2, 3)" in order to make the given data a list.
+You can also use the "eval()" function in order to input a list. Eg: eval(input("Enter a list"))""")
+            print()
+            print("""Accessing a list: 
+You can use "len()" to find the number of items in a list.""")
+            print()
+            print("""Concatenation & Replication:
+Adding 2 lists L1 + L2 will add the elements of L2 to L1. 
+Multiplying a list to a natural number will repeat the list.""")
+            print()
+            print("""In order to pick an element from a list we can do this: 
+L = ["A", "B", "C"]
+L[1] # this will print "B" 
+
+NOTE: The index is numbered from 0 to len(L) - 1 from the left, and -1 to -(len(L)) from the right.""")
+
+        elif ch6 == 2:
+            x += 1
+            print("""Joining Lists:
+You can join 2 lists by using the concatenation operator (+).
+Eg: L1 = [1, 2, 3]
+    L2 = [4, 5, 6]
+    L = L1 + L2
+
+NOTE: You cannot add a data of any other type to lists other than lists.
+
+Repeating Lists:
+    L1 = ["A", "B", "C"]
+    L1 * 2
+    will give ["A", "B", "C", "A", "B", "C"]
+
+Slicing Lists: 
+    In order to obtain a certain part of the list, you can do this:-
+    L = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    L[1:3] # will return [2, 3, 4]
+
+""")
+            print("Now try the above functions one by one.")
+            # pick an element
+            List1 = eval(input("Enter a list (x): "))
+            Index = int(input("Enter index from above: "))
+            print()
+            if Index > (len(List1) - 1):
+                print("Bruh Moment")
+                continue
+            print(f"Your selected element is: {List1[Index]}")
+
+            # add lists
+            print()
+            List2 = eval(input("Enter another list (y): "))
+            Putin = input("Type the required step to add the lists: ")
+            if Putin == "x + y" or Putin == "x+y" or "+" in Putin:
+                print(f"Joined Lists: {List1 + List2}")
+            else:
+                print("Bruh Moment")
+
+            # replicate lists
+            print()
+            Replin = input(
+                "Type the required step to replicate the list (x): ")
+            if "*" in Replin or Replin == "x * 2":
+                print(f"Replicated list x: {List1 * 2}")
+            else:
+                print("Bruh Moment")
+            print()
+
+            # list functions and methods
+            print("""LIST FUNCTIONS & METHODS:
+1. index(<arg>)  : It returns the index of the first matched item from the list.
+2. append(<arg>) : Adds an item to the end of the list.
+3. extend(<arg>) : Adding multiple elements to the end of the list.
+4. insert(<index>, <arg>) : It helps insert an element somewhere in between the list or any position of your choice.
+5. pop(<index>)  : Used to remove an item using its index.
+6. remove(<arg>) : Removes an element using its value.
+7. clear(<arg>)  : Removes all/matched elements from the list.
+8. count(<arg>)  : Returns the count of the item you passed as the argument.
+9. sort(reverse=bool) : Sorts the items of the list (reverse can be used with this).
+""")
+        elif ch6 == 3:
+            x += 1
+            print("""NESTED LISTS:
+Nested lists are lists that exist inside another list. Eg: [1, 2, [3, 4], 5].
+In order to access the elements of the sublist, use the index of the sublist as a slicing method. Eg: L[2][0].
+""")
+            print()
+            Acc = eval(input("Enter list A: "))
+            Acb = eval(input("Enter list B: "))
+            Ins = int(input("Enter index where you want to insert B in A: "))
+            Acc.insert(Ins, Acb)
+            print(f"Nested List: {Acc}")
     elif choice == 7:
         break
-    elif choice > 7:
+
+    elif choice == 8:
         x += 1
+        print("Wait for it...")
+        im = Image.open("src/unknown.png")
+        im.show()
+
+    elif choice == 9:
+        x += 1
+        print("Wait for it...")
+        rr = Image.open("src/wp9414419.png")
+        rr.show()
+    elif choice > 9:
         print("Not a valid choice")
-        print()
-        continue
