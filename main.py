@@ -223,18 +223,51 @@ elif C > 40:
 Now, lets recap everything you learnt in this chapter.
     """)
             answer1 = input(
-                "Given, a = 100 and b = 350, give the answer for the following statement\n>>> a is b\n$ ")
+                "Given, a = 100 and b = 350, give the output for the following statement\n>>> a is b\n$ ")
             if answer1.lower() == "true":
                 print("Incorrect Answer!")
+                break
             elif answer1.lower() == "false":
                 print("Correct Answer!")
             else:
                 image = Image.open("src/unknown.png")
                 image.show()
+                break
+
+            print("Great Job! Now here's another one.")
+            answer2 = input(
+                "Given a = \"hello\" and b = \"\", give the output for the following statement\n>>> a or b\n$ ")
+            if answer2 == "hello":
+                print("Correct Answer!")
+            else:
+                image = Image.open("src/unknown.png")
+                image.show()
+                break
+
         elif ch3 == 4:
             x += 1
+            print("""An Expression in Python is any valid combination of variables, literals and operators.
+Different types of expressions are- Arithmetic, Logical, Relational and String.
+Example: a, b = 10, 12""")
         elif ch3 == 5:
             x += 1
+            print("""A Python module is a file which contains some variables and constants, some functions, objects, etc. defined in it which can be used in other python code.
+            
+            Working with Math Module of Python:
+            In order to work with the math module, you have to first import the math module into the desired program. To do so, use "import math".
+            By doing this, you can use the various functions from the math module. Such as- math.sqrt(), math.log().
+
+            Now, lets recap math module.
+            """)
+            ans = input("How do you import the math module in python?\n>>> ")
+            if ans == "import math":
+                print("Correct!")
+            else:
+                print("Incorrect Answer!")
+                image = Image.open("src/unknown.png")
+                image.show()
+                break
+
     # chapter 4
     elif choice == 4:
         chap4 = PrettyTable(["S. No.", "Flow Of Control"])
