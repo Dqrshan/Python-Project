@@ -108,14 +108,14 @@ Python has the following tokens:
     iv. Special Literal: None
     v. Literal Collections
 4. Operators   - They are tokens that trigger some computation when applied to variables and other objects. Eg: +, -, *, etc.
-5. Punctuators - They are symbols that are used in programming languages to organise sentence structures. 
+5. Punctuators - They are symbols that are used in programming languages to organise sentence structures.
             """)
 
         elif ch2 == 2:
             x += 1
             print("""The basic structure of python program contains:-
 1. Expressions - Any legal combination of symbols that represent a value. Eg: a = 1 + 2, 3 + 5 / 4
-2. Statements  - A statement is a programming instruction due to which some action takes place. Eg: print("Hello World") 
+2. Statements  - A statement is a programming instruction due to which some action takes place. Eg: print("Hello World")
 3. Comments    - Comments are additional readable information which is read by the programmers but ignored by the python interpreter. Eg: # This is a comment
 4. Functions   - Function is a code that has a name and it can be reused by specifying its name in the program where needed. Eg: sum(1, 2)
 5. Blocks & Indentations - A group of statements is called a block and it can be identified by its indentation. Eg:
@@ -125,8 +125,8 @@ Python has the following tokens:
             """)
             print()
             print("""
-# Python code in order to convert given temperature in K to C. 
-# If the temperature is above 40 C, print "Temperature is very high" 
+# Python code in order to convert given temperature in K to C.
+# If the temperature is above 40 C, print "Temperature is very high"
 # and if the temperature is below -10 C, print "Temperature is very cold"
 #  ^^ comments ^^  #
 
@@ -175,9 +175,66 @@ elif C > 40:
         ])
         print(chap3)
         print()
-        ch = int(input("Enter Your Choice:- "))
+        ch3 = int(input("Enter Your Choice:- "))
         print()
-        print()
+        if ch3 == 1:
+            x += 1
+            print("""There are 5 main data types in python-
+1. Numbers: They can be further classified into integers, floating point numbers and complex numbers.
+2. Strings
+3. Lists
+4. Tuples: Tuples are those lists that cannot be modified. They are a group of comma separated values of any data type within ().
+5. Dictionaries: It is an unordered set of comma separated key-value pairs within {} with the requirement that no 2 keys can be the same.
+            """)
+        elif ch3 == 2:
+            x += 1
+            print("""Python can be broadly categorised into mutable and immutable types-
+1. Immutable: Immutable types are those that can never change their value in place. The following types are immutable- integers, floats, bools, strings, tuples, etc.
+2. Mutable  : Mutable types are those values that can be changed in place. Only 3 types are mutable in python which are lists, dictionaries and sets.
+""")
+        elif ch3 == 3:
+            x += 1
+            print("""The operators being carried out on data are represented by operators.
+1. Arithmetic:
+    a) Unary Operators : The operators that act on one operand are called unary operators. Eg: a = 5, where +a is 5.
+    b) Binary Operators: Operators that have 2 operands are called binary operators. 
+    Example:
+      i. +
+     ii. -
+    iii. *
+     iv. / 
+      v. // (Rounds off the quotient)
+     vi. % (Gives the remainder)
+    vii. ** (Exponential)
+
+2. Relational: They determine the relation among the different operands. The different relational operators are- <, >, >=, =<, !=, ==.
+
+3. Identity  : There are 2 identity operators- "is" and "is not". 
+    Eg: >>> a = 10
+        >>> b = 10
+        >>> c = 20
+        >>> a is b
+        True
+        >>> a is c
+        False
+
+4. Logical   : Logical operators consists of- "or", "and", "not".
+
+Now, lets recap everything you learnt in this chapter.
+    """)
+            answer1 = input(
+                "Given, a = 100 and b = 350, give the answer for the following statement\n>>> a is b\n$ ")
+            if answer1.lower() == "true":
+                print("Incorrect Answer!")
+            elif answer1.lower() == "false":
+                print("Correct Answer!")
+            else:
+                image = Image.open("src/unknown.png")
+                image.show()
+        elif ch3 == 4:
+            x += 1
+        elif ch3 == 5:
+            x += 1
     # chapter 4
     elif choice == 4:
         chap4 = PrettyTable(["S. No.", "Flow Of Control"])
@@ -228,7 +285,7 @@ String Operator + (Concatenation):
     [CAUTION! You cannot combine numbers and strings as operands]
 
 String Operator * (Replication):
-    The * operator when used with numbers it performs multiplication and returns the product. 
+    The * operator when used with numbers it performs multiplication and returns the product.
     When used with strings, the string will be replicated.
     [CAUTION! You cannot have strings as both the operands]
 
@@ -271,7 +328,7 @@ Python offers many built-in functions and methods for string manipulation.
     It returns the lowest index where the specified substring is found.
     Eg: >>> "hello world".index("l")
         >>> 2
-    
+
 5. isalpha()
     It returns True if all the characters in the string are alphabets.
 
@@ -318,20 +375,20 @@ In order to create a list, put a number of expressions in square brackets []. Eg
 Now try creating your own list.""")
             listvalues = eval(input("Enter your list now: "))
             print(f"Your list: {listvalues}")
-            print("""Creating a list: 
+            print("""Creating a list:
 You can use "L = list(1, 2, 3)" in order to make the given data a list.
 You can also use the "eval()" function in order to input a list. Eg: eval(input("Enter a list"))""")
             print()
-            print("""Accessing a list: 
+            print("""Accessing a list:
 You can use "len()" to find the number of items in a list.""")
             print()
             print("""Concatenation & Replication:
-Adding 2 lists L1 + L2 will add the elements of L2 to L1. 
+Adding 2 lists L1 + L2 will add the elements of L2 to L1.
 Multiplying a list to a natural number will repeat the list.""")
             print()
-            print("""In order to pick an element from a list we can do this: 
+            print("""In order to pick an element from a list we can do this:
 L = ["A", "B", "C"]
-L[1] # this will print "B" 
+L[1] # this will print "B"
 
 NOTE: The index is numbered from 0 to len(L) - 1 from the left, and -1 to -(len(L)) from the right.""")
 
@@ -350,7 +407,7 @@ Repeating Lists:
     L1 * 2
     will give ["A", "B", "C", "A", "B", "C"]
 
-Slicing Lists: 
+Slicing Lists:
     In order to obtain a certain part of the list, you can do this:-
     L = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     L[1:3] # will return [2, 3, 4]
@@ -425,3 +482,4 @@ In order to access the elements of the sublist, use the index of the sublist as 
         rr.show()
     elif choice > 9:
         print("Not a valid choice")
+# congrats you have a lot of patience
