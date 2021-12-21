@@ -280,18 +280,83 @@ Example: a, b = 10, 12""")
             ["", ""],
             ["4", "Range() Function"],
             ["", ""],
-            ["5", "The \"for\" Loop"],
-            ["", ""],
-            ["6", "The \"while\" Loop"],
-            ["", ""],
-            ["7", "Nested Loops"],
+            ["5", "Nested Loops"],
         ])
         print(chap4)
         print()
-        ch = int(input("Enter Your Choice:- "))
+        ch4 = int(input("Enter Your Choice:- "))
         print()
-        print()
+        if ch4 == 1:
+            x += 1
+            print("""Types of Statements in Python are: 
+1. Empty Statement- A statement is just nothing
+2. Simple (Single) Statement- Any single executable statement
+3. Compound Statement- It represents a group of statements executed""")
+        elif ch4 == 2:
+            x += 1
+            print("'if'  : It tests a condition and if the condition evaluates to True, it carries out some function")
+            print("'else': It is used along with the 'if' statement, it carries out a specific function if the condition is False")
+            print(
+                "'elif': It tests a condition if 'if' evaluates to False and carries out a specific function")
+            print(
+                "\nFor example, given numbers 1, 2, 3, 4, 5, 6, 7, 8, 9 and input 'num';\n")
+            f1 = input(
+                "What is the 'if' statement to display numbers greater than 5? ")
+            if f1 == "num > 5" or f1 == "5 < num":
+                print("Correct!")
+                print()
+            else:
+                print("Bruh Moment")
+                print()
+            f2 = input(
+                "What is the 'elif' statement to display numbers lesser than 5? ")
+            if f2 == "num < 5" or f1 == "5 > num":
+                print("Correct!")
+                print()
+            else:
+                print("Bruh Moment")
+                print()
+            f3 = input("What is the 'else' statement to all the numbers? ")
+            if f3 == "else" or f3 == None:
+                print("Correct!")
+                print()
+            else:
+                print("Bruh Moment")
+                print()
 
+        elif ch4 == 3:
+            x += 1
+            print("The nested 'if' statement is when we use an 'if' statement inside an 'if' statement. For example\n")
+            print("""
+    x = [1, 2, 3]
+    y = [1, 2, 3, 4, 5]
+    if x in y:
+        if len(x) != len(y):
+            print("x is a sublist of y, and they are not the same ;)")
+    """)  # devasurya did this
+        elif ch4 == 4:
+            x += 1
+            print("""The range(<start>, <stop>) function:
+for i in range(1, 100, 2): # This statement will print all odd numbers from 1 to 100, here 1 is the starting point, 100 is the ending point, 2 is the step of increment
+    print(i, end=" ") # This will print all odd numbers with a space
+""")
+        elif ch4 == 5:
+            x += 1
+            print("""The 'for' loop: 
+The 'for' loop is designed to process the items of any sequence one by one. It is written as;
+    for <variable> in <sequence>:
+For example: 
+    for i in range(1, 100):\n=---- o_o ----=\n
+            """)
+            print("""The 'while' loop:
+The 'while' loop is a conditional loop that will repeat the instructions within itself as long as the condition remains True.
+For example:
+    x = 0
+    while x < 50:
+        print(x)
+        x += 10 
+    # This will print 0, 10, 20, 30, 40\n=---- o_o ----=
+            """)
     # chapter 5
     elif choice == 5:
         chap5 = PrettyTable(["S. No.", "String Manipulation"])
