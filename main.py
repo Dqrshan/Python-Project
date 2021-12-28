@@ -3,24 +3,26 @@ from prettytable import PrettyTable
 
 head = PrettyTable(["Computer Project : Class 11 Science-I"])
 head.add_row(["         - by Devasurya & Darshan"])
-
 content = PrettyTable(["Table of contents"])  # main table of contents
-
 table = PrettyTable(["S. No.", "Chapter Name"])
-table.add_row(["1", "Getting Started With Python"])
-table.add_row([" ", " "])
-table.add_row(["2", "Python Fundamentals"])
-table.add_row([" ", " "])
-table.add_row(["3", "Data Handling"])
-table.add_row([" ", " "])
-table.add_row(["4", "Flow Of Control"])
-table.add_row([" ", " "])
-table.add_row(["5", "String Manipulation"])
-table.add_row([" ", " "])
-# we could have done `.add_rows([])` xD
-table.add_row(["6", "List Manipulation"])
-table.add_row([" ", " "])
-table.add_row(["7", "Exit the program"])
+table.add_rows([
+    ["1", "Getting Started With Python"],
+    [" ", " "],
+    ["2", "Python Fundamentals"],
+    [" ", " "],
+    ["3", "Data Handling"],
+    [" ", " "],
+    ["4", "Flow Of Control"],
+    [" ", " "],
+    ["5", "String Manipulation"],
+    [" ", " "],
+    ["6", "List Manipulation"],
+    [" ", " "],
+    ["7", "Guess The Number GAME"],
+    [" ", " "],
+    ["0", "Exit"]
+])
+
 x = 0
 while True:
     if x >= 1:
@@ -31,18 +33,17 @@ while True:
             continue
         elif contin.lower() != "yes":
             break
-    print(head)
-    print()
-    print("          Table Of Contents")
-    print(table)
-    print()
-    print()
-
+    print(f"{head}\n")
+    print("\t \tTable Of Contents")
+    print(f"{table}\n \n")
     choice = int(input("Enter Your Choice:- "))
     print()
-
+    # exit
+    if choice == 0:
+        print("Thanks for choosing us!")
+        break
     # chapter 1
-    if choice == 1:
+    elif choice == 1:
         chap1 = PrettyTable(["S. No.", "Getting Started With Python"])
         chap1.add_rows(
             [
@@ -51,9 +52,7 @@ while True:
                 ["2", "Print() Function"]
             ]
         )
-        print(chap1)
-        print()
-        print()
+        print(chap1, "\n")
         ch1 = int(input("Enter Your Choice:- "))
         print()
         # subtopic 1
@@ -91,8 +90,7 @@ while True:
             ["", ""],
             ["4", "Input And Output"]
         ])
-        print(chap2)
-        print()
+        print(chap2, "\n")
         ch2 = int(input("Enter Your Choice:- "))
         print()
         if ch2 == 1:
@@ -173,8 +171,7 @@ elif C > 40:
             ["5", "Math Module"]
             # ["6", "Debugging"]
         ])
-        print(chap3)
-        print()
+        print(chap3, "\n")
         ch3 = int(input("Enter Your Choice:- "))
         print()
         if ch3 == 1:
@@ -282,8 +279,7 @@ Example: a, b = 10, 12""")
             ["", ""],
             ["5", "Nested Loops"],
         ])
-        print(chap4)
-        print()
+        print(chap4, "\n")
         ch4 = int(input("Enter Your Choice:- "))
         print()
         if ch4 == 1:
@@ -367,8 +363,7 @@ For example:
             ["", ""],
             ["3", "String Functions & Methods"],
         ])
-        print(chap5)
-        print()
+        print(chap5, "\n")
         ch5 = int(input("Enter Your Choice:- "))
         print()
 
@@ -460,11 +455,9 @@ Python offers many built-in functions and methods for string manipulation.
             ["", ""],
             ["3", "Nested Lists"],
         ])
-        print(chap6)
-        print()
+        print(chap6, "\n")
         ch6 = int(input("Enter Your Choice:- "))
         print()
-
         if ch6 == 1:
             x += 1
             print("""A List is a standard data type of Python that can store a sequence of values belonging to any type. They are depicted through square brackets [].
@@ -564,20 +557,19 @@ In order to access the elements of the sublist, use the index of the sublist as 
             Ins = int(input("Enter index where you want to insert B in A: "))
             Acc.insert(Ins, Acb)
             print(f"Nested List: {Acc}")
-    elif choice == 7:
-        break
 
+    # Guess The Number GAME
+    elif choice == 7:
+        from gtn import guess_the_number
+        guess_the_number()
+
+    # Invalid Choice
     elif choice == 8:
         x += 1
-        print("Wait for it...")
-        im = Image.open("src/unknown.png")
-        im.show()
+        print("Why")
+        Image.open("src/unknown.png").show()
 
-    elif choice == 9:
-        x += 1
-        print("Wait for it...")
-        rr = Image.open("src/wp9414419.png")
-        rr.show()
-    elif choice > 9:
+    # More Invalid Choice
+    elif choice > 8:
         print("Not a valid choice")
 # congrats you have a lot of patience
