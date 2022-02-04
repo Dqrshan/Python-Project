@@ -560,6 +560,7 @@ In order to access the elements of the sublist, use the index of the sublist as 
 
     # Guess The Number GAME
     elif choice == 7:
+        x += 1
         from gtn import guess_the_number
         guess_the_number()
 
